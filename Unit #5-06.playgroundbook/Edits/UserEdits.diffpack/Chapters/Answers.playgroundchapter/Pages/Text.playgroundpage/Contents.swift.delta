@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>// Created on: 27-Nov-2018
+// Created by: Natalie Beshara
+// Created for: ICS3U
+// This program coverts the letters of the word entered to its hexadecimal 
+
+func convertWord(arrayEntered: [String: String], wordEntered: String) -&gt; String{
+    
+    var wordInCaps = wordEntered.uppercased()
+    
+    var charactersInWord = Array(wordInCaps.characters)
+    
+    var wordInHex : String = ""
+    
+    for counter in 0 ... charactersInWord.count - 1 {
+        var lettersInHex = arrayEntered[String(charactersInWord[counter])]!
+        
+        wordInHex = wordInHex + " " + lettersInHex
+    }
+    
+    return wordInHex
+}
+
+show("Enter a word and we will translate the letters into its hexadecimal version")
+
+var word : String = ask("Enter word")
+
+
+
+var hexdecimalArray : [String: String] = ["A": "0041", "B": "0042", "C": "0043", "D": "0044", "E": "0045", "F": "0046", "G": "0047", "H": "0048", "I": "0049", "J": "004A", "K": "004B", "L": "004C", "M": "004D", "N": "004E", "O": "004F", "P": "0050", "Q": "0051", "R": "0052", "S": "0053", "T": "0054", "U": "0055", "V": "0056", "W": "0057", "X": "0058", "Y": "0059", "Z": "005A"]
+
+
+
+
+
+var hexadeciamlWord = convertWord(arrayEntered: hexdecimalArray, wordEntered: word)
+
+show("\(hexadeciamlWord)")
+</string>
+			<key>ModifiedRange</key>
+			<string>{145, 1240}</string>
+			<key>OriginalContent</key>
+			<string>show("What is your name?")
+
+let name = ask("Name")
+
+show("Hi " + name)
+
+</string>
+			<key>OriginalRange</key>
+			<string>{145, 72}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Answers.playgroundchapter/Pages/Text.playgroundpage/Contents.swift</string>
+</dict>
+</plist>
